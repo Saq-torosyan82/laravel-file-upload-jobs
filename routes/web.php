@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use \App\Http\Controllers\SalesContorller;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +16,3 @@ use \App\Http\Controllers\SalesContorller;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/upload', [SalesContorller::class, 'index']);
-Route::post('/upload', [SalesContorller::class, 'upload']);
-Route::get('/batch', [SalesContorller::class, 'batch']);

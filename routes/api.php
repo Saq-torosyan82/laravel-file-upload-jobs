@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\SalesContorller;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/upload', [SalesContorller::class, 'index']);
+Route::post('/upload', [SalesContorller::class, 'upload']);
+Route::get('/batch', [SalesContorller::class, 'batch']);
